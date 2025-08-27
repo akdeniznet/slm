@@ -130,13 +130,13 @@ open class ContentX : ExtractorApi() {
     /**
      * ExtractorLink oluşturur ve callback'e gönderir
      */
-    private fun createExtractorLink(
+private fun createExtractorLink(
         url: String,
         refererUrl: String,
         callback: (ExtractorLink) -> Unit
     ) {
         callback.invoke(
-            ExtractorLink(
+            newExtractorLink(
                 source = this.name,
                 name = this.name,
                 url = url,
